@@ -55,9 +55,10 @@ void Tarjan(int x,int fa) {
 			if (dfn[x]==low[x]&&opt2>0) break;
 			for (int i=1;i<=num;i++) 
 			  	if (low[d[i]]<dfn[x]) {
-			  		g[i]=-INF;
+			  		for (int j=1;j<=n;j++) g[i][j]=-INF;
 			  		for (int h1=0;h1<3;h1++)
-			  		  if (h1+opt1!=3) g[i]=max(g[i],f[d[i]][h1][opt2]);
+			  		  if (h1+opt1!=3) 
+						for (int j=1;j<=n;j++) g[i][j]=max(g[i][j],f[d[i]][j][h1][opt2]);
 			  	}
 			
 		}
