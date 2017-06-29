@@ -1,4 +1,4 @@
- # 比赛记录(contest13 Codeforces Round #221 (Div.1&2)
+ # 比赛记录[contest13] [Codeforces Round #221 (Div.1&2)]
  
  [比赛链接1(div1)](http://codeforces.com/contest/375)
  
