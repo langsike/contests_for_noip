@@ -3,6 +3,7 @@
  [比赛链接1(div1)](http://codeforces.com/contest/375)
  
  [比赛链接2(div2)](http://codeforces.com/contest/376)
+ 
  ## div2 A
  ### Problem description
  > 以字符串形式给出一个杠杆的形态(支点位置，重物位置及重物质量)，求杠杆是平衡，左倾还是右倾。(字符串长度3≤|s|≤1000000)。
@@ -32,6 +33,8 @@ int main() {
 	return 0;
 }
  ```
+ 
+ 
  
   ## B
  ### Problem description
