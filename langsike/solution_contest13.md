@@ -1,11 +1,11 @@
  # 比赛记录
  
  [比赛链接](http://codeforces.com/contest/376)
- ## A
+ ## div2 A
  ### Problem description
- > haha
+ > 以字符串形式给出一个杠杆的形态(支点位置，重物位置及重物质量)，求杠杆是否平衡。(字符串长度3≤|s|≤1000000)。
  ### Solution
- ��ϸ����һ�£�������������һ��printf��������
+ 
  ```cpp
  #include <bits/stdc++.h>
  using namespace std;
@@ -15,42 +15,13 @@
  ```
  
  ***** 
- # ��������
+ # 赛后补题
  
  ## B
  ### Problem description
- > ������Ҫ����
+ > 输出我要补题
  ### Solution
- ��ϸ����һ�£�������������һ��printf��������
- ```cpp
- #include <bits/stdc++.h>
- using namespace std;
- int main () {
-     printf("I want buti\n");
- }
- ``` + -
- [��������](https://www.codeforces.com)
- ## A
- ### Problem description
- > ������ҪŰ��
- ### Solution
- ��ϸ����һ�£�������������һ��printf��������
- ```cpp
- #include <bits/stdc++.h>
- using namespace std;
- int main () {
-     printf("I want AC\n");
- }
- ```
- 
- ***** 
- # ��������
- 
- ## B
- ### Problem description
- > ������Ҫ����
- ### Solution
- ��ϸ����һ�£�������������һ��printf��������
+ 仔细分析一下，这个题可以用一个printf语句解决
  ```cpp
  #include <bits/stdc++.h>
  using namespace std;
