@@ -5,7 +5,7 @@
  ### Problem description
  > 以字符串形式给出一个杠杆的形态(支点位置，重物位置及重物质量)，求杠杆是否平衡。(字符串长度3≤|s|≤1000000)。
  ### Solution
- 
+ 由杠杆平衡条件可以得到当*∑(xi-k)wi=
  ```cpp
  #include <bits/stdc++.h>
  using namespace std;
