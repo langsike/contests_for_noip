@@ -3,7 +3,7 @@
  [比赛链接](http://codeforces.com/contest/376)
  ## A
  ### Problem description
- > ������ҪŰ��
+ > haha
  ### Solution
  ��ϸ����һ�£�������������һ��printf��������
  ```cpp
