@@ -36,7 +36,7 @@ int main() {
  
  
  
- ## div1 B
+ ## div2 B
  ### Problem description
  > 给出n个人,m条债务关系，(1≤n≤100;0 ≤m≤ 10^4)，试重新安排债务，使得债务总量之和最小。
  ### Solution
@@ -67,35 +67,13 @@ int main() {
 }
  ```
  ***** 
-  ## div2 A
+  ## div1 A
  ### Problem description
- > 给出n个人,m条债务关系，(1≤n≤100;0 ≤m≤ 10^4)，试重新安排债务，使得债务总量之和最小。
+ > 给出一个大整数a，a的位数在4和10^6之间，一定含有1,6,8,9，不含前导0，试给出一种重新排列整数中数字的方法，得到一个新数，使得新数不含前导0且能被7整除。
  ### Solution
- 稍作思考可知，我们可以O(m)计算出每一个人的债权数和债务数，若一个人债权数大于债务数，则可以将其债务转接到欠他债的人处，若一个人债权数小于债务数，则可以将其债权交给欠债的人，这样对答案贡献为abs(xi-yi)/2，(xi为其债权数，yi为其债务数),一方面每个人至少造成这么多代价，另一方面这个方案是可达到的，因此∑abs(xi-yi)/2即为符合要求的答案；
- 下面程序实现可能和上文稍有不同。
- 
+
  时间复杂度O(n+m)。
  ```cpp
- #include<iostream>
-#include<cstdio>
-#include<cstring>
-#include<cmath>
-using namespace std;
-int n,m;
-int f[10001];
-int main() {
-	scanf("%d%d",&n,&m);
-	for (int i=1;i<=m;i++) {
-		int u,v,w;
-		scanf("%d%d%d",&u,&v,&w);
-		f[v]+=w;
-		f[u]-=w;
-	}
-	int sum=0;
-	for (int i=1;i<=n;i++) if (f[i]>0) sum+=f[i];
-	printf("%d\n",sum);
-	return 0;
-}
  ```
  ***** 
  # 赛后补题
