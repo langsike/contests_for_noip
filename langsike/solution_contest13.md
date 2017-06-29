@@ -10,11 +10,26 @@
  由杠杆平衡条件可以得到,设sum=∑(xi-k)wi，xi为第i个重物的位置，wi为第i个重物的质量，若sum<0杠杆左倾，sum>0杠杆右倾，sum=0杠杆平衡；
  时间复杂度O(|s|)。
  ```cpp
- #include <bits/stdc++.h>
- using namespace std;
- int main () {
-     printf("I want AC\n");
- }
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<cmath>
+using namespace std;
+char s[2000002];
+int main() {
+	scanf("%s",s);
+	int len=strlen(s);
+	int k;
+	for (int i=0;i<len;i++) 
+	  if (s[i]=='^') k=i;
+	long long sum=0;
+	for (int i=0;i<len;i++)
+		if (s[i]>='0'&&s[i]<='9') sum+=(i-k)*(s[i]-48);
+	if (sum>0) printf("right\n");
+	  else if (sum<0) printf("left\n");
+	    else printf("balance\n");
+	return 0;
+}
  ```
  
  ***** 
