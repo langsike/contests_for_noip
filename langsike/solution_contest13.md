@@ -69,11 +69,48 @@ int main() {
  ***** 
   ## div1 A
  ### Problem description
- > 给出一个大整数a，a的位数在4和10^6之间，一定含有1,6,8,9，不含前导0，试给出一种重新排列整数中数字的方法，得到一个新数，使得新数不含前导0且能被7整除。
+ > 给出一个大整数a，a的位数len在4和10^6之间，一定含有1,6,8,9，不含前导0，试给出一种重新排列整数中数字的方法，得到一个新数，使得新数不含前导0且能被7整除，不能组成输出0。
  ### Solution
-
- 时间复杂度O(n+m)。
+这题隐含一个比较隐藏的性质：仅通过排列1，6，8，9，可以得到模7为0~6中的所有数：1869%7=0，1896%7=6,1986%7=5,8691%7=4,6891%7=3,1689%7=2,6189%7=1；因此我们可以先把所有0放到最后，分别扣除一个1,6,8,9后乱排，最后用1,6,8,9来调整大整数对7的模数，从而保证每一个输入都能组成一个模7为0的数字串。
+ 时间复杂度O(len)。
  ```cpp
+ #include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<cmath>
+using namespace std;
+char s[1000000];
+int vis[100];
+string s0;
+int mod() {
+	int len=s0.length();
+	int ans=0;
+	for (int i=0;i<len;i++) ans=(ans*10+s0[i]-48)%7;
+	return ans;
+}
+int main() {
+	scanf("%s",s);
+	int len=strlen(s);
+	for (int i=0;i<len;i++) vis[s[i]-48]++;
+	vis[1]--;
+	vis[6]--;
+	vis[8]--;
+	vis[9]--;
+	s0="";
+	for (int i=1;i<=9;i++) for (int j=1;j<=vis[i];j++) s0+=i+48;
+	cout<<s0;
+	s0=s0+"0000";
+	int ans=mod();
+	if (ans==0) printf("1869");
+	  else if (ans==1) printf("1896");
+	  else if (ans==2) printf("1986");
+	  else if (ans==3) printf("8691");
+	  else if (ans==4) printf("6891");
+	  else if (ans==5) printf("1689");
+	  else if (ans==6) printf("6189");
+	for (int i=1;i<=vis[0];i++) printf("0");
+	return 0;
+}
  ```
  ***** 
  # 赛后补题
