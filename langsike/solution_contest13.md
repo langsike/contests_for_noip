@@ -1,7 +1,6 @@
- # 比赛记录¼
- # 比赛记录¼
+ # 比赛记录
  
- [��������](https://www.codeforces.com)
+ [比赛链接](http://codeforces.com/contest/376)
  ## A
  ### Problem description
  > ������ҪŰ��
