@@ -1,6 +1,8 @@
  # 比赛记录
  
  [比赛链接1(div1)](http://codeforces.com/contest/375)
+ 
+ 
  [比赛链接2(div2)](http://codeforces.com/contest/376)
  ## div2 A
  ### Problem description
