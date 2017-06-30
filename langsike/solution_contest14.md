@@ -75,5 +75,12 @@ int main() {
 	return 0;
 }
  ```
+## C
+### Description
+ > 你能进行两个操作：
+ 
+ 操作1：
+ 
+ ### Solution
  ***** 
  # 赛后补题
