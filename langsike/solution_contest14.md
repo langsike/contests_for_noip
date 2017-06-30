@@ -36,6 +36,8 @@ int main() {
  ### Solution
  >枚举该串的长度为26的子串，分别判断是否能符合要求，若能符合要求则可将子串外的"?"字符任意填充输出，若不能找到输出-1。
  >时间复杂度依写的方法而定，O(|s|) 或 O(26\*|s|),为方便起见下面的程序采用后者复杂度。
+ 
+  ```cpp
 #include<iostream>
 #include<cstdio>
 #include<cstring>
