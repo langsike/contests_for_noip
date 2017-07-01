@@ -86,5 +86,24 @@ int main() {
  
  ### Solution
  > 由于要进行操作2时，x为完全平方数且x的算术平方根对(k+1)取模的值为0，因此x必须为(k+1)^2的倍数，而上一次操作2结束时x为k的倍数，因此我们可以令x变为k^2\*(k+1)^2，因此第i次加的次数应为[k^2\*(k+1)^2-k\*(k-1)]/k=k\*(k+1)^2-k+1，可以知道不会超过10^18。
+ 
+ > 时间复杂度O(n)。
+  ```cpp
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<cmath>
+using namespace std;
+int main() {
+	int n;
+	scanf("%d",&n);
+	for (long long i=1;i<=n;i++) {
+		long long now=i*(i+1)*(i+1)-i+1;
+		if (i==1) now=2;
+		printf("%lld\n",now);
+	}
+	return 0;
+}
+ ```
  ***** 
  # 赛后补题
